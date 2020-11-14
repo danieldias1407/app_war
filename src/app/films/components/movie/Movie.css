@@ -1,12 +1,15 @@
+body{
+    background-color: #000000;
+}
 .movie-container{
     margin: 20px;
     padding: 20px;
-    background-color:azure; 
+    background-color:#000000; 
 }
 .movie-paper{
     margin: 50px;
     padding: 20px;
-    background-color:darkgrey; 
+    background-color:#000000; 
 }
 .movie-paper img {
     height: 450px;
@@ -27,6 +30,16 @@
     text-align: center;
 }
 
-.movie-paper  {
+.MuiPaper-root  {
     background-color: darkkhaki;
 } 
+
+
+p{
+    color: #ffffff;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+}
