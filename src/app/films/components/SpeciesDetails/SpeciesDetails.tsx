@@ -14,7 +14,7 @@ function SpeciesDetails() {
 
     useEffect(() => {
       setSpecies(specieDetail);
-      
+    // eslint-disable-next-line  
     }, [])
     const  navigate = useNavigate();
   return (

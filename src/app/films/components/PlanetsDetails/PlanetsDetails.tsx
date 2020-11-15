@@ -15,7 +15,7 @@ function PlanetsDetails() {
    
     useEffect(() => {
       setPlanet(planetDetail);
-      
+      // eslint-disable-next-line
     }, [])
     const  navigate = useNavigate();
   return (

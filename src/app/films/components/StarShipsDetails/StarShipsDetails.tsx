@@ -14,7 +14,7 @@ function StarShipsDetails() {
 
     useEffect(() => {
         setstarShip(starShipDetail);
-      
+        // eslint-disable-next-line
     }, [])
     const  navigate = useNavigate();
   return (

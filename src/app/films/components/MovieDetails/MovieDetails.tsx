@@ -114,6 +114,7 @@ function MovieDetails() {
 
   useEffect(() => {
     setFilm(movieDetails);
+    // eslint-disable-next-line
   }, [])
 
   return (
@@ -193,8 +194,6 @@ function MovieDetails() {
             </Button>
           </span>
         ))}
-
-        <button onClick={() => navigate('/movie')}>Voltar</button>
       </Paper>
     </Grid>
 

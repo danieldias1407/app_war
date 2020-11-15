@@ -15,7 +15,7 @@ function VehiclesDetails() {
 
     useEffect(() => {
         setvehicle(vehicleDetail);
-      
+      // eslint-disable-next-line
     }, [])
     const  navigate = useNavigate();
   return (

@@ -13,7 +13,8 @@ function CharactersDetails() {
     const [people, setPeople] = useState<ICharactersDetails>();
 
     useEffect(() => {
-      setPeople(peopleDetail);    
+      setPeople(peopleDetail);   
+      // eslint-disable-next-line 
     }, [])
     const  navigate = useNavigate();
   return (
