@@ -13,6 +13,7 @@ export default interface IMovieDetails {
     species: string[],
     created: string[],
     edited:  string[],
+    backTela:boolean,
     url: string[];
  
 }

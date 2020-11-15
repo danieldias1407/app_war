@@ -1,6 +1,6 @@
 import { Button, Container, Typography } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, useLocation, useNavigate } from 'react-router-dom';
+import {useLocation, useNavigate } from 'react-router-dom';
 
 import './StarShipsDetails.css';
 import IStarShipsDetails from './IStarShipsDetails';
@@ -102,10 +102,11 @@ function StarShipsDetails() {
             </Button>
       </span>
     
-      <button onClick={() => navigate('/moviedetails',{state: {
-          starShip,
-          key:true
-        }})}>Voltar</button> 
+      <span >
+            <Button className="button-list-back" variant="outlined" color="inherit"onClick={() => navigate('/movie')}>
+              Back
+            </Button>
+      </span> 
 
     </Typography>
   </Container>

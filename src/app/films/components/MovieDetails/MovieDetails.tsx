@@ -1,6 +1,6 @@
-import { Button, Container, Grid, Paper, Typography } from '@material-ui/core';
+import { Button, Grid, Paper } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'
 import api from '../../../services/api';
 import ICharactersDetails from '../CharactersDetails/ICharactersDetails';
@@ -69,7 +69,7 @@ function MovieDetails() {
   }
 
   function saveStarships() {
-    const starShipsProsmise = film.species.map(starShip => {
+    const starShipsProsmise = film.starships.map(starShip => {
       return api.get(starShip)
 
     })
@@ -79,11 +79,12 @@ function MovieDetails() {
           return starShip.data;
         }) 
         setStarShipState(starShipList)
+        console.log("naves",starShipsProsmise)
       })
   }
 
   function saveVehicles() {
-    const vehichesProsmise = film.species.map(vehiches => {
+    const vehichesProsmise = film.vehicles.map(vehiches => {
       return api.get(vehiches)
     })
     vehichesProsmise &&
@@ -108,7 +109,7 @@ function MovieDetails() {
     navigate('/species', { state: speciesState });
   }
   function navigatePageStarShips(starShipState: IStarShipsDetails) {
-    navigate('/species', { state: starShipState });
+    navigate('/starships', { state: starShipState });
   }
 
   useEffect(() => {

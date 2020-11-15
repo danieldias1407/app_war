@@ -1,7 +1,6 @@
 import { Button, Container, Typography } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, useLocation, useNavigate } from 'react-router-dom';
-
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import './CharactersDetails.css';
 import ICharactersDetails from './ICharactersDetails';
@@ -14,8 +13,7 @@ function CharactersDetails() {
     const [people, setPeople] = useState<ICharactersDetails>();
 
     useEffect(() => {
-      setPeople(peopleDetail);
-      
+      setPeople(peopleDetail);    
     }, [])
     const  navigate = useNavigate();
   return (
@@ -82,12 +80,11 @@ function CharactersDetails() {
               {people?.eye_color}
             </Button>
       </span>
-    
-      <button onClick={() => navigate('/moviedetails',{state: {
-          people,
-          key:true
-        }})}>Voltar</button> 
-
+      <span className="span-back" >
+            <Button className="button-list-back" variant="outlined" color="inherit"onClick={() => navigate('/movie')}>
+              Back
+            </Button>
+      </span>
     </Typography>
   </Container>
   );

@@ -20,7 +20,7 @@ export default function MaintRoutes() {
                 <Route path="/moviedetails" element={<MovieDetails/>} />
                 <Route path="/characters" element={<CharactersDetails/>} />
                 <Route path="/vehicles" element={<VehiclesDetails/>} />
-                <Route path="/starships" element={<StarShipsDetails/>} />
+                <Route path="/starships" element={<StarShipsDetails />} />
                 <Route path="/species" element={<SpeciesDetails/>} />
                 <Route path="/planet" element={<PlanetsDetails/>} />
                 <Route path="/" element={<Animation/>}/>

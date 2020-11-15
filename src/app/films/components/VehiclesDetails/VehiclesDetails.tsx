@@ -1,6 +1,6 @@
 import { Button, Container, Typography } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, useLocation, useNavigate } from 'react-router-dom';
+import {useLocation, useNavigate } from 'react-router-dom';
 
 import './VehiclesDetails.css';
 import IVehiclesDetails from './IVehiclesDetails';
@@ -9,6 +9,7 @@ import IVehiclesDetails from './IVehiclesDetails';
 function VehiclesDetails() {
     const state = JSON.stringify(useLocation().state);
     const vehicleDetail: IVehiclesDetails = JSON.parse(state);
+    console.log("veh",vehicleDetail)
   
     const [vehicle, setvehicle] = useState<IVehiclesDetails>();
 
@@ -102,10 +103,11 @@ function VehiclesDetails() {
             </Button>
       </span>
     
-      <button onClick={() => navigate('/moviedetails',{state: {
-          vehicle,
-          key:true
-        }})}>Voltar</button> 
+      <span>
+            <Button className="button-list-back" variant="outlined" color="inherit"onClick={() => navigate('/movie')}>
+              Back
+            </Button>
+      </span> 
 
     </Typography>
   </Container>
