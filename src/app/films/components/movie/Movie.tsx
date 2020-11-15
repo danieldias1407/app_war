@@ -33,6 +33,7 @@ function Movie() {
                  </a>
                  <h1>{movie.title}</h1> 
                  <h3>Episodio: {movie.episode_id}</h3> 
+                 <h3>Director: {movie.director}</h3>
                  <p>{movie.opening_crawl}</p>
               </Paper>     
            </Grid>
