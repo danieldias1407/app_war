@@ -1,9 +1,9 @@
 import React, { useEffect, useState} from 'react';
 import './Movie.css';
-
-import { Grid, Paper } from '@material-ui/core';
 import api from '../../../services/api';
-import img from '../../../assets/img/star_wars_3.jpg';
+import { Grid, Paper } from '@material-ui/core';
+import {imageMovie} from '../movie/ImageMovie';
+
 import IMovie from './IMovie';
 import { useNavigate } from 'react-router-dom';
 
@@ -29,7 +29,7 @@ function Movie() {
            <Grid key={index} item xs={12} sm={6} md={4} className="grid-paper"> 
               <Paper className="movie-paper">
                  <a onClick={() => navigate('/moviedetails',{state:movie})}>
-                     <img src= {img} />
+                     <img src= {imageMovie[movie.episode_id - 1]} />
                  </a>
                  <h1>{movie.title}</h1> 
                  <h3>Episodio: {movie.episode_id}</h3> 

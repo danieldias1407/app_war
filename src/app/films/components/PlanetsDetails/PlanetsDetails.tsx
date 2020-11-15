@@ -3,88 +3,88 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, useLocation, useNavigate } from 'react-router-dom';
 
 
-import './CharactersDetails.css';
-import ICharactersDetails from './ICharactersDetails';
+import './PlanetsDetails.css';
+import IPlanetsDetails from './IPlanetsDetails';
 
 
-function CharactersDetails() {
+function PlanetsDetails() {
     const state = JSON.stringify(useLocation().state);
-    const peopleDetail: ICharactersDetails = JSON.parse(state);
-  
-    const [people, setPeople] = useState<ICharactersDetails>();
-
+    const planetDetail: IPlanetsDetails = JSON.parse(state);
+    
+    const [planet, setPlanet] = useState<IPlanetsDetails>();
+   
     useEffect(() => {
-      setPeople(peopleDetail);
+      setPlanet(planetDetail);
       
     }, [])
     const  navigate = useNavigate();
   return (
     <Container maxWidth="sm">
     <Typography component="div" style={{ backgroundColor: '#000000', height: '100vh' }} >
-      <h1> {people?.name}</h1>
+      <h1> {planet?.name}</h1>
       <span >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Hair Color: 
+            Rotation Period: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.hair_color}
+              {planet?.rotation_period}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Gender: 
+             Orbital Period: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.gender}
+              {planet?.orbital_period}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Height: 
+             Population: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.height}
+              {planet?.population}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-            Mass: 
+            Surface Walter: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.mass}
+              {planet?.surface_walter}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Skin Color: 
+             Climate: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.skin_color}
+              {planet?.climate}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Eye Color: 
+             Terrain: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.eye_color}
+              {planet?.terrain}
             </Button>
       </span>
     
       <button onClick={() => navigate('/moviedetails',{state: {
-          people,
+          planet,
           key:true
         }})}>Voltar</button> 
 
@@ -93,4 +93,4 @@ function CharactersDetails() {
   );
 }
 
-export default CharactersDetails;
+export default PlanetsDetails;

@@ -2,74 +2,73 @@ import { Button, Container, Typography } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, useLocation, useNavigate } from 'react-router-dom';
 
+import './SpeciesDetails.css';
+import ISpeciesDetails from './ISpeciesDetails';
 
-import './CharactersDetails.css';
-import ICharactersDetails from './ICharactersDetails';
 
-
-function CharactersDetails() {
+function SpeciesDetails() {
     const state = JSON.stringify(useLocation().state);
-    const peopleDetail: ICharactersDetails = JSON.parse(state);
+    const specieDetail: ISpeciesDetails = JSON.parse(state);
   
-    const [people, setPeople] = useState<ICharactersDetails>();
+    const [species, setSpecies] = useState<ISpeciesDetails>();
 
     useEffect(() => {
-      setPeople(peopleDetail);
+      setSpecies(specieDetail);
       
     }, [])
     const  navigate = useNavigate();
   return (
     <Container maxWidth="sm">
     <Typography component="div" style={{ backgroundColor: '#000000', height: '100vh' }} >
-      <h1> {people?.name}</h1>
+      <h1> {species?.name}</h1>
       <span >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Hair Color: 
+            Classification:
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.hair_color}
+              {species?.classification}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Gender: 
+            Designation: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.gender}
+              {species?.designation}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Height: 
+            Average Height: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.height}
+              {species?.average_height}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-            Mass: 
+            Skin Colors: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.mass}
+              {species?.skin_colors}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Skin Color: 
+            Hair Colors
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.skin_color}
+              {species?.hair_colors}
             </Button>
       </span>
       <span  >
@@ -79,12 +78,32 @@ function CharactersDetails() {
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.eye_color}
+              {species?.eye_colors}
+            </Button>
+      </span>
+      <span  >
+            <Button className="button-list-primary" variant="outlined" color="primary">
+            Average Lifespan 
+            </Button>
+      </span>
+      <span  >
+            <Button className="button-list-secondary" variant="outlined" color="secondary">
+              {species?.average_lifespan}
+            </Button>
+      </span>
+      <span  >
+            <Button className="button-list-primary" variant="outlined" color="primary">
+            Language:
+            </Button>
+      </span>
+      <span  >
+            <Button className="button-list-secondary" variant="outlined" color="secondary">
+              {species?.language}
             </Button>
       </span>
     
       <button onClick={() => navigate('/moviedetails',{state: {
-          people,
+          species,
           key:true
         }})}>Voltar</button> 
 
@@ -93,4 +112,4 @@ function CharactersDetails() {
   );
 }
 
-export default CharactersDetails;
+export default SpeciesDetails;

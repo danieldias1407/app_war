@@ -10,7 +10,7 @@ import './Main.css';
 
 function Main() {
   return (
-    <><div className="logo" ><img src= {logo}/></div>
+    <><p className="logo" ><img src= {logo}/></p>
       <Outlet /></>
 
   );

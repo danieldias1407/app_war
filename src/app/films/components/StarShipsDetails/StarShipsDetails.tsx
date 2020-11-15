@@ -2,89 +2,108 @@ import { Button, Container, Typography } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, useLocation, useNavigate } from 'react-router-dom';
 
+import './StarShipsDetails.css';
+import IStarShipsDetails from './IStarShipsDetails';
 
-import './CharactersDetails.css';
-import ICharactersDetails from './ICharactersDetails';
 
-
-function CharactersDetails() {
+function StarShipsDetails() {
     const state = JSON.stringify(useLocation().state);
-    const peopleDetail: ICharactersDetails = JSON.parse(state);
+    const starShipDetail: IStarShipsDetails = JSON.parse(state);
   
-    const [people, setPeople] = useState<ICharactersDetails>();
+    const [starShip, setstarShip] = useState<IStarShipsDetails>();
 
     useEffect(() => {
-      setPeople(peopleDetail);
+        setstarShip(starShipDetail);
       
     }, [])
     const  navigate = useNavigate();
   return (
     <Container maxWidth="sm">
     <Typography component="div" style={{ backgroundColor: '#000000', height: '100vh' }} >
-      <h1> {people?.name}</h1>
+      <h1> {starShip?.name}</h1>
       <span >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Hair Color: 
+            Model:
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.hair_color}
+              {starShip?.model}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Gender: 
+            Manufacturer: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.gender}
+              {starShip?.manufacturer}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Height: 
+            Const in Credits: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.height}
+              {starShip?.cost_in_credits}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-            Mass: 
+            Lenght: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.mass}
+              {starShip?.length}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Skin Color: 
+            Max atmosphering speed:
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.skin_color}
+              {starShip?.max_atmosphering_speed}
             </Button>
       </span>
       <span  >
             <Button className="button-list-primary" variant="outlined" color="primary">
-             Eye Color: 
+             Crew: 
             </Button>
       </span>
       <span  >
             <Button className="button-list-secondary" variant="outlined" color="secondary">
-              {people?.eye_color}
+              {starShip?.crew}
+            </Button>
+      </span>
+      <span  >
+            <Button className="button-list-primary" variant="outlined" color="primary">
+            Passengers: 
+            </Button>
+      </span>
+      <span  >
+            <Button className="button-list-secondary" variant="outlined" color="secondary">
+              {starShip?.passengers}
+            </Button>
+      </span>
+      <span  >
+            <Button className="button-list-primary" variant="outlined" color="primary">
+            Starship Class
+            </Button>
+      </span>
+      <span  >
+            <Button className="button-list-secondary" variant="outlined" color="secondary">
+              {starShip?.starship_class}
             </Button>
       </span>
     
       <button onClick={() => navigate('/moviedetails',{state: {
-          people,
+          starShip,
           key:true
         }})}>Voltar</button> 
 
@@ -93,4 +112,4 @@ function CharactersDetails() {
   );
 }
 
-export default CharactersDetails;
+export default StarShipsDetails;
