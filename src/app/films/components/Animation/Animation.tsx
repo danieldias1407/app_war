@@ -24,43 +24,35 @@ const Animation = () => {
     <Grid container className="intro-animation" style={{ position: "relative" }}>
       <Grid item className="intro-animation-container">
         <Grid container className="intro-animation-text">
-          <span style={{top:movieText}}>
+          <span style={{top:movieText}}>          
+
             <h2> A Long Time Ago, in a galaxy far, far away ... </h2>
 
             <h2>
-              São tempos muito difícies! Por isso, Glaucia Lemos precisa
-              encontrar o sabre de luz para que possa obter poderes de programar
-              como nenhuma pessoa na galáxia. E com isso, ela inicia a sua busca
-              por toda a galáxia. Durante a sua busca, Glaucia se depara com um
-              planeta chamado Tatooine. E é justamente ali que ela iniciará todo
-              o seu treinamento para conseguir os seus poderes novamente.
+              Turmoil has engulfed the
+              Galactic Republic. The taxation
+              of trade routes to outlying star
+              systems is in dispute.
             </h2>
 
             <h2>
-              São tempos muito difícies! Por isso, Glaucia Lemos precisa
-              encontrar o sabre de luz para que possa obter poderes de programar
-              como nenhuma pessoa na galáxia. E com isso, ela inicia a sua busca
-              por toda a galáxia. Durante a sua busca, Glaucia se depara com um
-              planeta chamado Tatooine. E é justamente ali que ela iniciará todo
-              o seu treinamento para conseguir os seus poderes novamente.
+              Hoping to resolve the matter
+              with a blockade of deadly
+              battleships, the greedy Trade
+              Federation has stopped all
+              shipping to the small planet
+              of Naboo.
             </h2>
 
             <h2>
-              São tempos muito difícies! Por isso, Glaucia Lemos precisa
-              encontrar o sabre de luz para que possa obter poderes de programar
-              como nenhuma pessoa na galáxia. E com isso, ela inicia a sua busca
-              por toda a galáxia. Durante a sua busca, Glaucia se depara com um
-              planeta chamado Tatooine. E é justamente ali que ela iniciará todo
-              o seu treinamento para conseguir os seus poderes novamente.
-            </h2>
-
-            <h2>
-              São tempos muito difícies! Por isso, Glaucia Lemos precisa
-              encontrar o sabre de luz para que possa obter poderes de programar
-              como nenhuma pessoa na galáxia. E com isso, ela inicia a sua busca
-              por toda a galáxia. Durante a sua busca, Glaucia se depara com um
-              planeta chamado Tatooine. E é justamente ali que ela iniciará todo
-              o seu treinamento para conseguir os seus poderes novamente.
+              While the Congress of the
+              Republic endlessly debates
+              this alarming chain of events,
+              the Supreme Chancellor has
+              secretly dispatched two Jedi
+              Knights, the guardians of
+              peace and justice in the
+              galaxy, to settle the conflict…
             </h2>
           </span>
         </Grid>
